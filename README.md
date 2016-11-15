@@ -1,14 +1,14 @@
 # Pizza Store - README
 
-## statement
+## Statement
 The best pizza ordering experience after Yelp, GrubHub.
 
-## technology
+## Technology
 + HTML
 + CSS
 + JavaScript
 + Angular
 
-## team
+## Team
 + Raymond Konopka
 
