@@ -1,55 +1,100 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Raymond Konopka">
-        <meta name="keywords" content="angular, html, css, js">
-        <meta name="X-UA-Compatible" content="IE=Edge">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="fred belotte">
+    <meta name="keywords" content="angular, html, css, js">
+    <meta name="X-UA-Compatible" content="IE=Edge">
 
-        <title>Pizza Store</title>
-
-        <link rel="stylesheet" href="cdn/bootstrap">
-        <link rel="stylesheet" href="style/main.css">
-    </head>
+    <title>Pizza Store</title>
     
-    <body>
-        <header>
-            <h1>Pizza Store</h1>
-        </header>
+    <link rel="stylesheet" href="style/main.css">
+  </head>
 
-        <nav></nav>
+  <body class="container-fluid" data-ng-app="pizzaApp">
+    <header class="row">
+      <h1 class="col-sm-12">Pizza Store</h1>
+    </header>
 
-        <main>
-            <section>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </section>
-            
-            <div></div>
-        </main>
+    <nav class="row"></nav>
 
-        <aside>
-            <header>Coupons</header>
-            <ul>
-                <li>10% Off</li>
-                <li>Buy 2 medium any toppings, get 1 small cheese free</li>
-                <li>Buy 3 large, get 1 large free</li>
-            </ul>
-        </aside>
+    <main class="row">
+      <section class="col-sm-12">
+        <ul class="list-unstyled row">
+          <li class="col-sm-4">
+            <figure>
+              <img src="image/pizza_1.jpg" alt="brick-oven pizza with molten cheese" class="img-responsive"/>
+              <figcaption>Veggie Pizza</figcaption>
+            </figure>
+          </li>
+          <li class="col-sm-4">
+            <figure>
+              <img src="image/pizza_2.jpg" alt="brick-oven pizza with molten cheese" class="img-responsive"/>
+              <figcaption>Meatie Pizza</figcaption>
+            </figure>
+          </li>
+          <li class="col-sm-4">
+            <figure>
+              <img src="image/pizza_3.jpg" alt="brick-oven pizza with molten cheese" class="img-responsive"/>
+              <figcaption>Custom Pizza</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
 
-        <footer>
-            <nav></nav>
+      <div data-ng-view></div>
 
-            <small>Copyright &copy; 2016, Raymond Konopka. All rights reserved.</small>
-        </footer>
+      <div class="col-sm-9">
+        <form action="">
+          <label for="crust">Crusts</label>
+          <select name="crust" id="crust">
+            <option value="0">select a crust</option>
+            <option value="1">thin crust</option>
+            <option value="2">stuffed crust</option>
+          </select>
 
-        <script src="script/app.js"></script>
-    </body>
+          <label for="sauce">Sauces</label>
+          <select name="sauce" id="sauce">
+            <option value="0">select a sauce</option>
+            <option value="1">tomato</option>
+            <option value="2">marinara</option>
+          </select>
+
+          <button type="reset" class="btn btn-danger">cancel order</button>
+          <button type="button" class="btn btn-success">place order</button>
+        </form>
+      </div>
+
+      <aside class="col-sm-3">
+        <header>Coupons</header>
+        <ul>
+          <li>10% off</li>
+          <li>buy 2 medium any toppings, get 1 small cheese free</li>
+          <li>buy 3 large any toppings, get 1 large cheese free</li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer class="row">
+      <nav class="col-sm-12">
+        <ul>
+          <li><a href="">Sitemap</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Twitter</a></li>
+          <li><a href="">Facebook</a></li>
+        </ul>
+      </nav>
+
+      <small class="col-sm-12">copyright &copy; 2016, fred belotte. all rights reserved.</small>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="script/app.js"></script>
+    <script src="module/home/controller.js"></script>
+    <script src="module/home/service.js"></script>
+    <script src="script/util.js"></script>
+  </body>
 </html>
-
-
